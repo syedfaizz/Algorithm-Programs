@@ -4,30 +4,31 @@ using System.Text;
 
 namespace Algorithm
 {
-    class Algorithm<T> where T : IComparable
+    class Algorithm
     {
-        public void InsertionSort(T[] arr)
+        public static bool IsAnagram(string str1, string str2)
         {
-            T max;
-            for (int i = 1; i < arr.Length; i++)
+            if (str1.Length != str2.Length)
             {
-                max = arr[i];
-                int j = i - 1;
-                while (j >= 0 && arr[j].CompareTo(max) > 0)
+                return false;
+            }
+            else
+            {
+                bool temp = true;
+                char[] string1 = str1.ToLower().ToCharArray();
+                char[] string2 = str2.ToLower().ToCharArray();
+                Array.Sort(string1);
+                Array.Sort(string2);
+                for (int i = 0; i < str1.Length; i++)
                 {
-                    arr[j + 1] = arr[j];
-                    j--;
+                    if (string1[i].CompareTo(string2[i]) != 0)
+                    {
+                        temp = false;
+                        break;
+                    }
                 }
-                arr[j + 1] = max;
+                return temp;
             }
-        }
-        public void Display(T[] arr)
-        {
-            for (int i = 0; i < arr.Length; i++)
-            {
-                Console.Write(arr[i] + " ");
-            }
-            Console.WriteLine();
         }
     }
 }
