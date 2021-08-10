@@ -6,29 +6,42 @@ namespace Algorithm
 {
     class Algorithm
     {
-        public static bool IsAnagram(string str1, string str2)
+        static readonly ArrayList palindromeList = new ArrayList();
+        const int LIMIT = 1000;
+        public static void PrintPrime()
         {
-            if (str1.Length != str2.Length)
+            bool temp;
+            for (int i = 11; i <= LIMIT; i++)
             {
-                return false;
-            }
-            else
-            {
-                bool temp = true;
-                char[] string1 = str1.ToLower().ToCharArray();
-                char[] string2 = str2.ToLower().ToCharArray();
-                Array.Sort(string1);
-                Array.Sort(string2);
-                for (int i = 0; i < str1.Length; i++)
+                temp = false;
+                for (int j = 11; j <= i / 2; j++)
                 {
-                    if (string1[i].CompareTo(string2[i]) != 0)
+                    if (i % j == 0)
                     {
-                        temp = false;
+                        temp = true;
                         break;
                     }
                 }
-                return temp;
+                if (temp == false)
+                    PrimePalindrome(i);
             }
+            Console.WriteLine();
+        }
+        public static void PrimePalindrome(int num)
+        {
+            if (PalindromePrime.IsPalindrome(num) == true)
+            {
+                palindromeList.Add(num);
+            }
+        }
+        public static void PrintPalindrome()
+        {
+            Console.WriteLine("Palindrome-Prime in Range");
+            foreach (int prime in palindromeList)
+            {
+                Console.Write(prime + " ");
+            }
+            Console.WriteLine();
         }
     }
 }
