@@ -4,30 +4,32 @@ using System.Text;
 
 namespace Algorithm
 {
-    class Algorithm<T> where T : IComparable
+    class Algorihm<T> where T : IComparable
     {
-        T[] array;
-        public Algorithm(T[] array)
+        public T[] BubbleSort(T[] arr)
         {
-            this.array = array;
-            Array.Sort(this.array);
-        }
-       
-        public int BinarySearch(T[] array, T element)
-        {
-            int low = 0, high = array.Length - 1;
-            while (low <= high)
+            for (int i = 0; i < arr.Length; i++)
             {
-                int mid = (low + high) / 2;
-                int key = element.CompareTo(array[mid]);
-                if (key == 0)
-                    return mid;
-                if (key > 0)
-                    low = mid + 1;
-                else
-                    high = mid - 1;
+                T temp;
+                for (int j = i + 1; j < arr.Length; j++)
+                {
+                    if (arr[i].CompareTo(arr[j]) > 0)
+                    {
+                        temp = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = temp;
+                    }
+                }
             }
-            return -1;
+            return arr;
+        }
+        public void Display(T[] arr)
+        {
+            foreach (T sort in arr)
+            {
+                Console.Write(sort + " ");
+            }
+            Console.WriteLine();
         }
     }
 }
