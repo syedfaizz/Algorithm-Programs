@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-public class Demo 
+public class Algorithm 
 {
    public static void Main () 
    {
