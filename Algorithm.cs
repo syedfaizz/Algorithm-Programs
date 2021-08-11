@@ -12,7 +12,8 @@ namespace Algorithm
          int n = 10, i, j, val, flag;
          Console.WriteLine("Insertion Sort");
          Console.Write("Initial array is: ");
-         for (i = 0; i < n; i++) {
+         for (i = 0; i < n; i++) 
+         {
             Console.Write(arr[i] + " ");
          }
          for (i = 1; i < n; i++) 
@@ -31,7 +32,8 @@ namespace Algorithm
             }
          }
          Console.Write("\nSorted Array is: ");
-         for (i = 0; i < n; i++) {
+         for (i = 0; i < n; i++) 
+         {
             Console.Write(arr[i] + " ");
          }
       }
