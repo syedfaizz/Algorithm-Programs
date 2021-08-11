@@ -22,3 +22,4 @@ using System.Text;
            Console.Write("Number is not Palindrome");     
     }  
   }
+}
