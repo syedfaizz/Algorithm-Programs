@@ -2,34 +2,23 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Algorithm
-{
-    class Algorihm<T> where T : IComparable
-    {
-        public T[] BubbleSort(T[] arr)
-        {
-            for (int i = 0; i < arr.Length; i++)
-            {
-                T temp;
-                for (int j = i + 1; j < arr.Length; j++)
-                {
-                    if (arr[i].CompareTo(arr[j]) > 0)
-                    {
-                        temp = arr[i];
-                        arr[i] = arr[j];
-                        arr[j] = temp;
-                    }
-                }
+namespace Algorithm {
+   class Algorithm {
+      static void Main(string[] args {
+         int[] arr = { 78, 55, 45, 98, 13 };
+         int temp;
+         for (int j = 0; j <= arr.Length - 2; j++) {
+            for (int i = 0; i <= arr.Length - 2; i++) {
+               if (arr[i] > arr[i + 1]) {
+                  temp= arr[i + 1];
+                  arr[i + 1] = arr[i];
+                  arr[i] = temp;
+               }
             }
-            return arr;
-        }
-        public void Display(T[] arr)
-        {
-            foreach (T sort in arr)
-            {
-                Console.Write(sort + " ");
-            }
-            Console.WriteLine();
-        }
-    }
-}
+         }
+         Console.WriteLine("Sorted:");
+         foreach (int p in arr)
+            Console.Write(p + " ");
+         Console.Read();
+      }
+  
