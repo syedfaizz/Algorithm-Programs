@@ -30,4 +30,3 @@ namespace Algorithm
             return -1;
         }
     }
-}
