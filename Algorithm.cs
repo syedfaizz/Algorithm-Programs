@@ -2,33 +2,26 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Algorithm
+public class Demo 
 {
-    class Algorithm
-    {
-        public static bool IsAnagram(string str1, string str2)
-        {
-            if (str1.Length != str2.Length)
-            {
-                return false;
-            }
-            else
-            {
-                bool temp = true;
-                char[] string1 = str1.ToLower().ToCharArray();
-                char[] string2 = str2.ToLower().ToCharArray();
-                Array.Sort(string1);
-                Array.Sort(string2);
-                for (int i = 0; i < str1.Length; i++)
-                {
-                    if (string1[i].CompareTo(string2[i]) != 0)
-                    {
-                        temp = false;
-                        break;
-                    }
-                }
-                return temp;
-            }
-        }
-    }
+   public static void Main () 
+   {
+      string str1 = "heater";
+      string str2 = "reheat";
+      char[] ch1 = str1.ToLower().ToCharArray();
+      char[] ch2 = str2.ToLower().ToCharArray();
+      Array.Sort(ch1);
+      Array.Sort(ch2);
+      string val1 = new string(ch1);
+      string val2 = new string(ch2);
+
+      if (val1 == val2) 
+      {
+         Console.WriteLine("Both the strings are Anagrams");
+      } 
+      else
+       {
+         Console.WriteLine("Both the strings are not Anagrams");
+      }
+   }
 }
