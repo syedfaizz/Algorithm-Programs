@@ -21,4 +21,5 @@ namespace Algorithm {
             Console.Write(p + " ");
          Console.Read();
       }
-  
+   }                    
+}
