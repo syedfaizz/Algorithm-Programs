@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-public class Algorithm 
+public class AnagramDetection
 {
    public static void Main () 
    {
