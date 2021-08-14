@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Algorithm 
+namespace InsectionSort
 {
-   class Algorithm 
+   class InsectionSort
    {
       static void Main(string[] args) 
       {
