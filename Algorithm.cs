@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Algorithm 
+namespace MergeSort 
 {
-   class Algorithm 
+   class MergeSort 
    {
       static public void merge(int[] arr, int p, int q, int r) 
       {
