@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Algorithm 
+namespace BubbleSort
 {
-   class Algorithm 
+   class BubbleSort
    {
       static void Main(string[] args 
       {
