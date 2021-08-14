@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Algorithm 
+namespace BinarySearch
 {
-   class Algorithm 
+   class BinarySearch
    {
 public static object BinarySearchDisplay(int[] arr, int key) 
 {
